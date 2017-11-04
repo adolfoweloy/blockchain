@@ -9,7 +9,7 @@ public class ProofOfWorkTest {
     @Test
     public void shouldFindAValidProof() {
         ProofOfWork proofOfWork = new ProofOfWork(new SymmetricSignature());
-        int result = proofOfWork.proofOfWork(100);
+        int result = proofOfWork.process(100);
         assertEquals(35293, result);
     }
 

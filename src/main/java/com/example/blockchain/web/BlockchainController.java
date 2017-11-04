@@ -37,7 +37,7 @@ public class BlockchainController {
     public ResponseEntity<Block> mine() {
         Block lastBlock = blockchain.lastBlock();
         int lastProof = lastBlock.getProof();
-        int proof = proofOfWork.proofOfWork(lastProof);
+        int proof = proofOfWork.process(lastProof);
 
         Transaction transaction = new Transaction("0", "node1", 1);
         blockchain.transaction(transaction);

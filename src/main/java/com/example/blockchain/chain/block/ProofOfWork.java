@@ -24,7 +24,7 @@ public final class ProofOfWork {
      * @param lastProof
      * @return
      */
-    public int proofOfWork(int lastProof) {
+    public int process(int lastProof) {
 
         int proof = 0;
         while(!validProof(lastProof, proof)) {
